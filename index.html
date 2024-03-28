@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="header__main-page">
+                    <a href="" class="header__main-page-link">Main</a>
+                </div>
+                <div class="header__select">
+                    <select name="select" id="selectOrientation">
+                        <option value="all">All</option>
+                        <option value="portrait">Vertical</option>
+                        <option value="landscape">Horizontal</option>
+                    </select>
+                </div>
+                <div class="header__form">
+                    <form class="form" name="searchForm">
+                        <div class="form__search">
+                            <div class="search__input">
+                                <input type="text" name="searchPhotoInput" placeholder="Search images" class="search__input-elem">
+                            </div>
+                            <div class="search__btn">
+                                <button type="submit" id="searchBtn">
+                                    <i class='bx bx-search-alt'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="header__favorites" id="headerFavorites">
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="loading-icon" id="loadingIcon"><i class='bx bx-loader'></i></div>
+                <div id="randomPhotoContainer"></div>
+                <div id="favoritesPhotoContainer"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModal"><i class='bx bx-x' ></i></span>
+                        <img id="modalImage" class="modal-image" src="" alt="">
+                        <div class="social-interaction">
+                            <div id="commentsList"></div>
+                            <div class="modal-actions">
+                                <button id="likeBtn"><i class='bx bx-heart'></i></button>
+                                <button id="unlikeBtn"><i class='bx bxs-heart' ></i></button>
+                                <button id="favoriteBtn"><i class='bx bxs-star' ></i></button>
+                            </div>
+                            <div class="comments-section">
+                                <form id="commentFormElem" name="commentForm">
+                                    <input type="text" id="nameInput" name="name" placeholder="Your name">
+                                    <textarea id="commentInput" placeholder="Leave a comment" name="comment"></textarea>
+                                    <button id="saveCommentBtn">Send <i class='bx bxs-send' ></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
